@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PlantDiary</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_category">Category</string>
+    <string name="title_profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="about">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_SETTING_fragment" />
+    <string name="name">Name</string>
+</resources>

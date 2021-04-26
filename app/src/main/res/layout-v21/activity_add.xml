@@ -1,0 +1,268 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="25sp"
+    android:id="@+id/layout"
+    android:background="#63BF68"
+    tools:context=".AddActivity"
+    android:textColor="@color/black">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lag2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/plantpicture"
+            android:layout_width="193dp"
+            android:layout_height="183dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            app:layout_constraintEnd_toEndOf="@+id/addpicture"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/billede_blomster" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newpicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/plantpicture"
+            app:layout_constraintEnd_toStartOf="@+id/plantpicture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/plantpicture"
+            app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addpicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/white"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/plantpicture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/plantpicture"
+            app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Name of the plant"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/categoryspinner"
+            app:layout_constraintStart_toStartOf="@+id/categoryspinner"
+            app:layout_constraintTop_toBottomOf="@+id/plantpicture" />
+
+        <Switch
+            android:id="@+id/water"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=" Water"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/moisture"
+            app:layout_constraintStart_toStartOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/attributes"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Spinner
+            android:id="@+id/andetspinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="123dp"
+
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/moisture"
+            app:layout_constraintStart_toStartOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/andet" />
+
+        <Spinner
+            android:id="@+id/replantspinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="123dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/turn"
+            app:layout_constraintStart_toStartOf="@+id/turn"
+            app:layout_constraintTop_toBottomOf="@+id/replant" />
+
+        <Spinner
+            android:id="@+id/turnspinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="123dp"
+
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/moisturespinner"
+            app:layout_constraintEnd_toEndOf="@+id/turn"
+            app:layout_constraintStart_toStartOf="@+id/turn"
+            app:layout_constraintTop_toBottomOf="@+id/turn" />
+
+        <Spinner
+            android:id="@+id/moisturespinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+
+            android:layout_width="123dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/moisture"
+            app:layout_constraintStart_toStartOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/moisture" />
+
+        <Spinner
+            android:id="@+id/waterspinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="123dp"
+
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/moisture"
+            app:layout_constraintStart_toStartOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/water" />
+
+        <Spinner
+            android:id="@+id/fertilizerspinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="123dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/turn"
+            app:layout_constraintStart_toStartOf="@+id/turn"
+            app:layout_constraintTop_toBottomOf="@+id/fertilizer" />
+
+        <Switch
+            android:id="@+id/fertilizer"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=" Fertilizer"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/turn"
+            app:layout_constraintStart_toStartOf="@+id/turn"
+            app:layout_constraintTop_toBottomOf="@+id/attributes"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/andet"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:text=" Andet"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/moisture"
+            app:layout_constraintStart_toStartOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/waterspinner"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/replant"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:text=" Re-plant"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/turn"
+            app:layout_constraintStart_toStartOf="@+id/turn"
+            app:layout_constraintTop_toBottomOf="@+id/fertilizerspinner"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/moisture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text=" Moisture"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/andetspinner"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/turn"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:text=" Turn"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moisture"
+            app:layout_constraintTop_toBottomOf="@+id/replantspinner"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Spinner
+            android:id="@+id/categoryspinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            app:layout_constraintEnd_toEndOf="@+id/fertilizer"
+            app:layout_constraintStart_toStartOf="@+id/attributes"
+            app:layout_constraintTop_toBottomOf="@+id/category" />
+
+        <TextView
+            android:id="@+id/attributes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Add alarms"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryspinner" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Type of plant"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/water"
+            app:layout_constraintStart_toStartOf="@+id/categoryspinner"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <Button
+            android:id="@+id/saveplant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:text="Add to my plants"
+            android:backgroundTint="#247028"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/turnspinner"
+            app:layout_constraintStart_toStartOf="@+id/moisturespinner"
+            app:layout_constraintTop_toBottomOf="@+id/moisturespinner" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
